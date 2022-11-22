@@ -1,0 +1,50 @@
+<h1 style="color:blue;">Ingrese datos</h1>
+<br>
+
+<form action="/productos" method="post">
+
+    <div class="form-group">
+        <label for="titulo"><b>Titulo</b></label>
+        <input id="titulo" class="form-control" type="text" name="title">
+    </div>
+
+    <div class="form-group">
+        <label for="precio"><b>Precio</b></label>
+        <input id="precio" class="form-control" type="text" name="price">
+    </div>
+
+    <div class="form-group">
+        <label for="imagen"><b>Imagen</b></label>
+        <input id="imagen" class="form-control" type="text" name="thumbnail">
+    </div>
+
+    <div class="form-group">
+        <label for="id"><b>ID</b></label>
+        <input id="id" class="form-control" type="number" name="id">
+    </div>
+
+    <button class="btn btn-success mt-3 mb-5">Enviar</button>
+</form>
+
+<h2 style="color:crimson;">Historial</h2>
+
+
+{{#if productos}}
+    <div class="table-responsive">
+        <table class="table table-dark">
+            <tr style="color: yellow;"> <th>Titulo</th> <th>Precio</th> <th>Imagen</th> <th>ID</th></tr>
+            {{#each productos}}
+                  <tr>
+                    <td>{{title}}</td>
+                    <td>{{price}}</td>
+                    <td><img style="width: 80px;" src="{{thumbnail}}", alt="sin imagen"></td>
+                    <td>{{id}}</td>
+                </tr>
+            {{/each}}
+        </table>
+    </div>
+{{else}}
+    <h3 class="alert alert-danger">No hay productos</h3>
+{{/if}} 
+
+

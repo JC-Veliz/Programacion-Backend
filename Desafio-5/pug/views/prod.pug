@@ -1,0 +1,53 @@
+extends layout 
+
+block productos1 
+    - const titulo = "Pug"
+    h1(style="color:blue;")="Ingrese producto"
+    br
+
+    form(action="/productos" method="post")
+
+        div(class="form-group")
+            label(for="titulo")="Titulo"
+            input(id="titulo" class="form-control" type="text" name="title")
+        
+
+        div(class="form-group")
+            label(for="precio")="Precio"
+            input(id="precio" class="form-control" type="text" name="price")
+        
+
+        div(class="form-group")
+            label(for="imagen")="Imagen"
+            input(id="imagen" class="form-control" type="text" name="thumbnail")
+        
+
+        div(class="form-group")
+            label(for="id")="ID"
+            input(id="id" class="form-control" type="number" name="id")
+        
+
+        button(class="btn btn-success mt-3 mb-5")="Enviar"
+    
+
+    h2(style="color:crimson;")="Historial"
+
+    if(productos)
+            div(class="table-responsive")
+                table(class="table table-dark")
+                    tr(style="color: yellow")
+                        th="Titulo"
+                         th="Precio"
+                          th="Imagen"
+                           th="ID"
+                    each producto in productos
+                        tr
+                            th!=producto.title
+                            th!=producto.price
+                            th
+                                img(style="width: 80px;" src!=producto.thumbnail, alt="sin imagen")
+                            th!=producto.id
+    else 
+        h3(class="alert alert-danger")="No hay Productos"
+                
+
