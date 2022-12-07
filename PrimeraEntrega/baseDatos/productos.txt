@@ -1,0 +1,32 @@
+[
+  {
+    "nombre": "Lapiz",
+    "descripcion": "Color Azul",
+    "codigo": 1,
+    "precio": 20,
+    "foto": "imagenLapiz",
+    "stock": 10,
+    "timestamp": 1670148183025,
+    "id": 1
+  },
+  {
+    "nombre": "Regla",
+    "descripcion": "Plastico, Color Rojo",
+    "codigo": 2,
+    "precio": 40,
+    "foto": "imagenRegla",
+    "stock": 10,
+    "timestamp": 1670148229039,
+    "id": 2
+  },
+  {
+    "nombre": "Cartuchera",
+    "descripcion": "Color Negra, tela",
+    "codigo": 3,
+    "precio": 150,
+    "foto": "imagenCartuchera",
+    "stock": 10,
+    "timestamp": 1670148266844,
+    "id": 3
+  }
+]
