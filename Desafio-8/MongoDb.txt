@@ -1,0 +1,138 @@
+1-Creamos la Carpeta:
+
+mkdir Desafio-8
+
+mkdir base
+
+2-Generamos la conexion:
+
+mongod --dbpath ./base
+
+3-Generamos la conexion de cliente:
+
+mongosh
+
+4-Crear una base de datos llamada ecommerce
+
+use ecommerce
+
+5-Crear dos colecciones mensajes y productos.
+
+db.createCollection("mensajes")
+
+db.createCollection("productos")
+
+6-Crear 10 documentos con valores distintos para mensajes y productos.
+
+db.mensajes.insertMany([
+    {email: "JC@gmail.com", mensaje: "Hola!"},
+    {email: "JP@gmail.com", mensaje: "Hola, tenes stock de lapiceras?"},
+    {email: "JC@gmail.com", mensaje: "Si si tenemos stock de 20 unidades"},
+    {email: "JP@gmail.com", mensaje: "Gracias, Tienen de diferente color?"},
+    {email: "JC@gmail.com", mensaje: "Si, tenemos, Negro, Rojo y Azul"},
+    {email: "JP@gmail.com", mensaje: "Cuanto demora en llegar el producto?"},
+    {email: "JC@gmail.com", mensaje: "El producto tarda 2 dias despues de la compra!"},
+    {email: "JP@gmail.com", mensaje: "Se puede comprar con targeta?"},
+    {email: "JC@gmail.com", mensaje: "Si, con cualquier targeta tenes recargo del %20!"},
+    {email: "JP@gmail.com", mensaje: "Gracias! Saludos!"}
+    ])
+
+db.productos.insertMany([
+    {nombre: "Lapiz", descripcion: "Color Azul", codigo: 1, precio: 500, foto: "imagenLapiz", stock: 10},
+    {nombre: "Regla", descripcion: "De goma varios colores", codigo: 1, precio: 800, foto: "imagenRegla", stock: 10},
+    {nombre: "Goma", descripcion: "Borrra lapicera y lapiz", codigo: 1, precio: 900, foto: "imagenGoma", stock: 10},
+    {nombre: "Cartuchera", descripcion: "Color Negra", codigo: 1, precio: 2150, foto: "imagenCartuchera", stock: 10},
+    {nombre: "Corrector", descripcion: "No mancha las manos", codigo: 1, precio: 3550, foto: "imagenCorrector", stock: 10},
+    {nombre: "Saca Punta", descripcion: "Color Violeta", codigo: 1, precio: 4725, foto: "imagenSacaPunta", stock: 10},
+    {nombre: "Marcador", descripcion: "Varios Colores", codigo: 1, precio: 1550, foto: "imagenMarcador", stock: 10},
+    {nombre: "Lapicera", descripcion: "Color Azul,Roja o Negra", codigo: 1, precio: 4990, foto: "imagenLapicera", stock: 10},
+    {nombre: "Crallon", descripcion: "Varios Colores", codigo: 1, precio: 1289, foto: "imagenCrallon", stock: 10},
+    {nombre: "Escuadra", descripcion: "Profesional", codigo: 1, precio: 2860, foto: "imagenEscuadra", stock: 10}
+])
+
+7-Listar todos los documentos en cada colecciones
+
+mensajes: db.mensajes.find()
+
+productos: db.productos.find()
+
+8-Mostrar la cantidad de documentos almacenados en cada una de ellas.
+
+mensajes: db.mensajes.estimatedDocumentCount()
+
+productos: db.productos.estimatedDocumentCount()
+
+9-Realizaar un CRUD sobre la coleccion de productos.
+
+    A-Agregar un producto mas en la coleccion de productos:
+
+        db.productos.insertOne({nombre: "Mochila", descripcion: "Camuflada", codigo: 1, precio: 5000, foto: "imagenMochila", stock: 10})
+    
+    B-Realizar una consulta por nombre de producto especifico:
+
+        B-1-Listar los Productos con precio menor a 1000 pesos:
+
+            db.productos.find({"precio": {$lt: 1000}}, {"nombre":1, "_id":0})
+            
+
+        B-2-Listar los Productos con precio entre 1000 a 3000 pesos:
+
+            db.productos.find({"precio": {$gte: 1000, $lte: 3000}},{"nombre":1, "_id":0})
+        
+        B-3-Listar los Productos con precio menor a 3000 pesos:
+
+            db.productos.find({"precio": {$gt: 3000}}, {"nombre":1, "_id":0})
+
+        B-4-Realizar una consulta que traiga solo el nombre del tercer producto mas barato.
+
+            db.productos.find({"precio": {$lt: 5000}}, {"nombre":1, "_id":0}).sort({price: 1}).limit(1).skip(2)
+
+    C-Hacer una actualizacion sobre todos los productos, agregando el campo stock a 100.
+
+        db.productos.updateMany({}, {$set: {"stock": 100}})
+
+        verificar: db.productos.find()
+
+    D-Cambiar el stock a cero de los productos con precios mayores a 4000 pesos.
+
+        db.productos.updateMany({"precio": {$gt: 4000}}, {$set: {stock: 0}})
+
+        verificar: db.productos.find({"precio": {$gt: 4000}})
+
+    E-Borrar los productos con precio menor a 1000 pesos
+
+        verificar: db.productos.estimatedDocumentCount()
+
+        db.productos.deleteMany({"precio": {$lt: 1000}})
+
+        verificar:  db.productos.find()
+                    db.productos.estimatedDocumentCount()
+
+10-Crear un usuario "pepe" clave: "asd456" que solo pueda leer la base de datos ecommerce
+    Verificar que pepe no pueda cambiar la informacion.
+    
+
+    A- Entramos a la DB Admin
+
+        use admin 
+    
+    B-Creamos el Usuario que pueda leer solamente
+
+        db.createUser(
+            {
+                user: "pepe",
+                pwd: "asd456,
+                roles: [ { role: "read", db: "ecommerce" } ]
+            }
+        )
+
+    Recordar que debemos montar el servidor con autenticaciones para comprobar
+    los roles de los usuarios creados.
+
+        mongod --dbpath ./Desafio-8 --auth
+
+    Luego probamos el usuario creados
+
+        mongosh -u pepe -p asd456
+
+    verificar: db.productos.insertOne({nombre: "Calculadora", descripcion: "Profesional", codigo: 1, precio: 6000, foto: "imagenCalculadora", stock: 10})
