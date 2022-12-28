@@ -1,0 +1,88 @@
+PRUEBAS En insomnia para ProductosMongoDB:
+
+TODOS LOS PRODUCTOS:
+
+GET localhost:8080/api/producto
+
+[
+  {
+    _id: new ObjectId("63ab9dd307fe3f8a407af613"),
+    nombre: 'Goma',
+    descripcion: 'Borrar',
+    codigo: '2',
+    foto: 'ImagenGoma',
+    precio: 200,
+    stock: 20,
+    timestamp: 2022-12-28T02:52:06.798Z
+  },
+  {
+    _id: new ObjectId("63aba34107fe3f8a407af614"),
+    nombre: 'Regla',
+    descripcion: 'Plastico',
+    codigo: '2',
+    foto: 'ImagenRegla',
+    precio: 400,
+    stock: 20,
+    timestamp: 2022-12-28T02:52:06.799Z
+  },
+  {
+    _id: new ObjectId("63aba9126bd7d9c5cb10185b"),
+    nombre: 'Cartuchera',
+    descripcion: 'Color negra',
+    codigo: '2',
+    precio: 405,
+    foto: 'imagenCartuchera',
+    stock: 10,
+    timestamp: 2022-12-28T02:25:22.562Z,
+    __v: 0
+  }
+]
+
+BUSCAR PRODUCTO POR ID:
+
+tomamos el id de algun producto a buscar
+
+GET localhost:8080/api/producto/"id que elegimos"
+
+
+AGREGAR UN PRODUCTO:
+
+POST localhost:8080/api/producto
+
+ponemos en el body:
+
+{
+	"nombre": "Lapiz",
+	"descripcion": "Color Azul",
+	"codigo": 1,		
+	"foto": "imagenLapiz",
+	"precio": 20,
+	"stock": 10
+		
+}
+
+
+
+ACTUALIZAR PRODUCTO:
+
+tomamos el id de la Cartuchera
+
+PUT localhost:8080/api/producto/63aba9126bd7d9c5cb10185b ----> Producto Cartuchera
+
+ponemos en el body para modificar:
+{
+	"nombre": "Escuadra",
+	"descripcion": "Plastico",
+	"codigo": 2,		
+	"foto": "imagenPlastico",
+	"precio": 45,
+	"stock": 10
+		
+}
+
+BORRAR UN PORDUCTO:
+
+tomamos el id de algun producto a eliminar y lo pasamos como parametro
+
+DELETE localhost:8080/api/producto/"ID DEL PRODUCTO A ELIMINAR"
+
