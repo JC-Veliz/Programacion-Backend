@@ -1,0 +1,56 @@
+Instalar Dependencias:
+
+@faker-js/faker
+express
+mongoose
+normalizr
+
+PRUEBAS EN INSOMNIA:
+
+GET TODOS LOS MENSAJES:
+
+http://localhost:8080/api/mensajes
+
+
+POST AGREGAR MENSAJE
+
+http://localhost:8080/api/mensajes
+
+JSON: 
+	{
+		"author": {
+			"email": "Emiliano@gmail.com",
+			"nombre": "Emilio",
+			"apellido": "Hola",
+			"edad": 22,
+			"alias": "EE",
+			"avatar": "imagenAvatar2"
+		},		
+		"text": "Hola a todos!"		
+	}
+
+PUT ACTUALIZAR MENSAJE
+
+http://localhost:8080/api/mensajes/63bc61ac7bdf2b67b1e2a3c0
+
+tomamos el _id del mensaje para pasarlo en el parametro
+
+GET MENSAJES POR ID
+
+http://localhost:8080/api/mensajes/_id
+
+tomamos el _id del mensaje para pasarlo en el parametro
+
+DEL BORRAR MENSAJE
+
+http://localhost:8080/api/mensajes/_id
+
+tomamos el _id del mensaje para pasarlo en el parametro
+
+GET MENSAJE NORMALIZADO
+
+http://localhost:8080/api/mensajeNormalizado
+
+GET 5 PRODUCTOS RANDOM FAKER
+
+http://localhost:8080/api/faker
