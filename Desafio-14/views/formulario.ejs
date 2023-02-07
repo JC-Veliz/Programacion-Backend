@@ -1,0 +1,44 @@
+<div>
+    <div> 
+        <h1 style="color:blue;">Ingrese Producto</h1>
+        <br>
+
+        <form class="form" role="form" autocomplete="off">
+
+            <div class="form-group">
+                <label for="titulo"><b>Nombre</b></label>
+                <input required id="titulo" class="form-control" type="text" name="titulo" placeholder="Nombre del producto" >
+            </div>
+
+            <div class="form-group">
+                <label for="descripcion"><b>Descripcion</b></label>
+                <input required id="descripcion" class="form-control" type="text" name="descripcion" placeholder="Escribe una breve descripcion" >
+            </div>
+
+            <div class="form-group">
+                <label for="codigo"><b>Codigo</b></label>
+                <input required id="codigo" class="form-control" type="number" name="codigo" placeholder="Codigo del producto" >
+            </div>
+
+            <div class="form-group">
+                <label for="precio"><b>Precio</b></label>
+                <input required id="precio" class="form-control" type="number" name="precio" placeholder="Precio del producto" >
+            </div>
+
+            <div class="form-group">
+                <label for="imagen"><b>Foto</b></label>
+                <input required id="imagen" class="form-control" type="text" name="foto" placeholder="Imagen del producto" >
+            </div>
+
+            <div class="form-group">
+                <label for="stock"><b>Stock</b></label>
+                <input required id="stock" class="form-control" type="number" name="stock" placeholder="Cantidad de productos" >
+            </div>
+            
+            <button onclick="return addProduct()" class="btn btn-success mt-3 mb-5">Enviar</button>
+                      
+        </form>
+         
+    
+    </div>
+</div>
