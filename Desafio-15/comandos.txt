@@ -1,0 +1,33 @@
+1) Ejecutar el servidor (modos FORK y CLUSTER)
+
+node server.js --port 8080
+node server.js --port 8080 --serverMode FORK
+node server.js --port 8080 --serverMode CLUSTER
+
+2) Ejecutar con FOREVER
+
+forever start server.js -w --port 8080 --serverMode CLUSTER
+
+3) Ejecutar con PM2
+
+    MODO FORK
+    pm2 start server.js --watch -- --port 8081
+    MODO CLUSTER
+    pm2 start server.js --watch -i max -- --port 8081
+    LISTAR LOS PROCESOS
+    pm2 list   
+
+4) NGINX
+    a) Redirigir todas las consultas a /api/randoms a un cluster de servidores escuchando en el puerto 8081. El cluster será creado desde node utilizando el módulo nativo cluster.
+    
+    forever start server.js -w --port 8081 --serverMode CLUSTER
+    forever start server.js -w --port 8080 --serverMode FORK
+    Archivo de configuracion en /nginx_config_files/nginx_1.conf
+
+    b) Luego, modificar la configuración para que todas las consultas a /api/randoms sean redirigidas a un cluster de servidores gestionado desde nginx, repartiéndolas equitativamente entre 4 instancias escuchando en los puertos 8082, 8083, 8084 y 8085 respectivamente.
+
+    forever start server.js -w --port 8082 --serverMode FORK
+    forever start server.js -w --port 8083 --serverMode FORK
+    forever start server.js -w --port 8084 --serverMode FORK
+    forever start server.js -w --port 8085 --serverMode FORK
+    Archivo de configuracion en /nginx_config_files/nginx_2.conf
