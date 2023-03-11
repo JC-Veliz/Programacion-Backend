@@ -1,0 +1,341 @@
+Statistical profiling result from bloq-v8.log, (1628 ticks, 0 unaccounted, 0 excluded).
+
+ [Shared libraries]:
+   ticks  total  nonlib   name
+   1204   74.0%          C:\WINDOWS\SYSTEM32\ntdll.dll
+    402   24.7%          C:\Program Files\nodejs\node.exe
+      2    0.1%          C:\WINDOWS\System32\KERNELBASE.dll
+      1    0.1%          C:\WINDOWS\System32\KERNEL32.DLL
+
+ [JavaScript]:
+   ticks  total  nonlib   name
+      3    0.2%   15.8%  LazyCompile: *resolve node:path:158:10
+      2    0.1%   10.5%  LazyCompile: *next C:\Users\Kaku\Desktop\Desafio-14\node_modules\express\lib\router\index.js:177:16
+      1    0.1%    5.3%  RegExp: ^[!#$%&'*+.^_`|~0-9A-Za-z-]+\/[!#$%&'*+.^_`|~0-9A-Za-z-]+$
+      1    0.1%    5.3%  RegExp: [^\t\x20-\x7e\x80-\xff]
+      1    0.1%    5.3%  LazyCompile: *realpathSync node:fs:2455:22
+      1    0.1%    5.3%  LazyCompile: *processTicksAndRejections node:internal/process/task_queues:68:35
+      1    0.1%    5.3%  LazyCompile: *nextTick node:internal/process/task_queues:104:18
+      1    0.1%    5.3%  LazyCompile: *isPathSeparator node:path:52:25
+      1    0.1%    5.3%  LazyCompile: *Module._load node:internal/modules/cjs/loader:800:24
+      1    0.1%    5.3%  Function: ^tryFile node:internal/modules/cjs/loader:424:17
+      1    0.1%    5.3%  Function: ^syncExports node:internal/bootstrap/loaders:304:14
+      1    0.1%    5.3%  Function: ^stat node:fs:1500:14
+      1    0.1%    5.3%  Function: ^noop node:internal/util/debuglog:47:14
+      1    0.1%    5.3%  Function: ^createWriteWrap node:internal/stream_base_commons:109:25
+      1    0.1%    5.3%  Function: ^afterWriteDispatched node:internal/stream_base_commons:155:30
+      1    0.1%    5.3%  Function: ^Hash node:internal/crypto/hash:62:14
+
+ [C++]:
+   ticks  total  nonlib   name
+
+ [Summary]:
+   ticks  total  nonlib   name
+     19    1.2%  100.0%  JavaScript
+      0    0.0%    0.0%  C++
+     10    0.6%   52.6%  GC
+   1609   98.8%          Shared libraries
+
+ [C++ entry points]:
+   ticks    cpp   total   name
+
+ [Bottom up (heavy) profile]:
+  Note: percentage shows a share of a particular caller in the total
+  amount of its parent calls.
+  Callers occupying less than 1.0% are not shown.
+
+   ticks parent  name
+   1204   74.0%  C:\WINDOWS\SYSTEM32\ntdll.dll
+     36    3.0%    C:\Program Files\nodejs\node.exe
+      1    2.8%      LazyCompile: ~x C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\es_MX\name\prefix.js:1:388
+      1  100.0%        Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\es_MX\name\prefix.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1    2.8%      LazyCompile: ~x C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\en\finance\credit_card\maestro.js:1:388
+      1  100.0%        Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\en\finance\credit_card\maestro.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1    2.8%      LazyCompile: ~x C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\de_AT\name\prefix.js:1:388
+      1  100.0%        Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\de_AT\name\prefix.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1    2.8%      LazyCompile: ~u C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\tr\address\default_country.js:1:388
+      1  100.0%        Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\tr\address\default_country.js:1:1
+      1  100.0%          LazyCompile: *Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1    2.8%      LazyCompile: ~u C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\es_MX\commerce\product_name.js:1:388
+      1  100.0%        Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\es_MX\commerce\product_name.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1    2.8%      LazyCompile: ~n C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\sk\name\prefix.js:1:388
+      1  100.0%        Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\sk\name\prefix.js:1:1
+      1  100.0%          LazyCompile: *Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1    2.8%      LazyCompile: ~m C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\fr_CH\animal\cow.js:1:388
+      1  100.0%        Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\fr_CH\animal\cow.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1    2.8%      LazyCompile: ~listenInCluster node:net:1501:25
+      1  100.0%        LazyCompile: ~Server.listen node:net:1544:35
+      1  100.0%          LazyCompile: ~SERVER C:\Users\Kaku\Desktop\Desafio-14\server.js:54:16
+      1  100.0%            Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\server.js:1:1
+      1    2.8%      LazyCompile: ~k C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\tr\name\male_first_name.js:1:388
+      1  100.0%        Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\tr\name\male_first_name.js:1:1
+      1  100.0%          LazyCompile: *Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1    2.8%      LazyCompile: ~i C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\ne\internet\domain_suffix.js:1:388
+      1  100.0%        Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\ne\internet\domain_suffix.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1    2.8%      LazyCompile: ~get C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\ur\name\index.js:1:368
+      1  100.0%        Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\ur\name\index.js:1:1
+      1  100.0%          LazyCompile: *Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1    2.8%      LazyCompile: ~get C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\sv\address\index.js:1:368
+      1  100.0%        Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\sv\address\index.js:1:1
+      1  100.0%          LazyCompile: *Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1    2.8%      LazyCompile: ~get C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\fr_CH\animal\cat.js:1:324
+      1  100.0%        LazyCompile: ~get C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\fr_CH\animal\index.js:1:368
+      1  100.0%          Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\fr_CH\animal\index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1109:37
+      1    2.8%      LazyCompile: ~get C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\fa\commerce\index.js:1:368
+      1  100.0%        Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\fa\commerce\index.js:1:1
+      1  100.0%          Function: ^Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1    2.8%      LazyCompile: ~get C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\en_AU_ocker\name\index.js:1:368
+      1  100.0%        LazyCompile: ~get C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\en_AU_ocker\index.js:1:368
+      1  100.0%          Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\en_AU_ocker\index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1109:37
+      1    2.8%      LazyCompile: ~exports.USVString C:\Users\Kaku\Desktop\Desafio-14\node_modules\webidl-conversions\lib\index.js:265:21
+      1  100.0%        LazyCompile: ~URL C:\Users\Kaku\Desktop\Desafio-14\node_modules\whatwg-url\lib\URL.js:90:16
+      1  100.0%          LazyCompile: ~URLWithoutHost C:\Users\Kaku\Desktop\Desafio-14\node_modules\mongodb-connection-string-url\lib\index.js:74:1
+      1  100.0%            LazyCompile: ~ConnectionString C:\Users\Kaku\Desktop\Desafio-14\node_modules\mongodb-connection-string-url\lib\index.js:82:16
+      1    2.8%      LazyCompile: ~equals C:\Users\Kaku\Desktop\Desafio-14\node_modules\mongodb\lib\sdam\server_description.js:95:11
+      1  100.0%        LazyCompile: ~serverUpdateHandler C:\Users\Kaku\Desktop\Desafio-14\node_modules\mongodb\lib\sdam\topology.js:313:24
+      1  100.0%          LazyCompile: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\mongodb\lib\sdam\topology.js:473:53
+      1  100.0%            LazyCompile: *emit node:events:460:44
+      1    2.8%      LazyCompile: ~containsNamespace C:\Users\Kaku\Desktop\Desafio-14\node_modules\depd\index.js:29:28
+      1  100.0%        LazyCompile: ~istraced C:\Users\Kaku\Desktop\Desafio-14\node_modules\depd\index.js:169:19
+      1  100.0%          LazyCompile: ~depd C:\Users\Kaku\Desktop\Desafio-14\node_modules\depd\index.js:103:15
+      1  100.0%            Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\send\index.js:1:1
+      1    2.8%      LazyCompile: ~_addDefaultMeta C:\Users\Kaku\Desktop\Desafio-14\node_modules\winston\lib\winston\logger.js:648:18
+      1  100.0%        Function: ^DerivedLogger.<computed> C:\Users\Kaku\Desktop\Desafio-14\node_modules\winston\lib\winston\create-logger.js:71:47
+      1  100.0%          Function: ^getInfoBloq C:\Users\Kaku\Desktop\Desafio-14\controllers\controlerNuevo.js:136:21
+      1  100.0%            Function: ^handle C:\Users\Kaku\Desktop\Desafio-14\node_modules\express\lib\router\layer.js:86:49
+      1    2.8%      LazyCompile: ~Timeout node:internal/timers:167:17
+      1  100.0%        LazyCompile: ~setTimeout node:timers:140:20
+      1  100.0%          LazyCompile: ~_reschedule C:\Users\Kaku\Desktop\Desafio-14\node_modules\mongodb\lib\sdam\monitor.js:414:16
+      1  100.0%            LazyCompile: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\mongodb\lib\sdam\monitor.js:348:21
+      1    2.8%      LazyCompile: *realpathSync node:fs:2455:22
+      1  100.0%        Function: ^toRealPath node:internal/modules/cjs/loader:433:20
+      1  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:424:17
+      1  100.0%            Function: ^tryExtensions node:internal/modules/cjs/loader:440:23
+      1    2.8%      LazyCompile: *readPackageScope node:internal/modules/cjs/loader:361:26
+      1  100.0%        Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1  100.0%          LazyCompile: *Module._load node:internal/modules/cjs/loader:800:24
+      1  100.0%            Function: ^Module.require node:internal/modules/cjs/loader:1049:36
+      1    2.8%      Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\zu_ZA\name\index.js:1:1
+      1  100.0%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:800:24
+      1    2.8%      Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\sv\address\city_suffix.js:1:1
+      1  100.0%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1021:33
+      1    2.8%      Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\pt_PT\name\female_prefix.js:1:1
+      1  100.0%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1021:33
+      1    2.8%      Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\nl_BE\address\default_country.js:1:1
+      1  100.0%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1021:33
+      1    2.8%      Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\nl\lorem\words.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1021:33
+      1    2.8%      Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\mk\name\male_last_name.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1021:33
+      1    2.8%      Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\lv\phone_number\formats.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1021:33
+      1    2.8%      Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\he\name\first_name.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1021:33
+      1    2.8%      Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\he\commerce\index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1021:33
+      1    2.8%      Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\ge\phone_number\index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1021:33
+      1    2.8%      Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\fr_CH\date\index.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1021:33
+      1    2.8%      Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\fr_BE\address\city_prefix.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1021:33
+      1    2.8%      Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\el\finance\credit_card\visa.js:1:1
+      1  100.0%        Function: ^Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1021:33
+      1    2.8%      C:\Program Files\nodejs\node.exe
+      1  100.0%        LazyCompile: *Module._load node:internal/modules/cjs/loader:800:24
+      1  100.0%          Function: ^Module.require node:internal/modules/cjs/loader:1049:36
+      1  100.0%            Function: ^require node:internal/modules/cjs/helpers:102:31
+     17    1.4%    LazyCompile: *realpathSync node:fs:2455:22
+     17  100.0%      Function: ^toRealPath node:internal/modules/cjs/loader:433:20
+     17  100.0%        Function: ^tryFile node:internal/modules/cjs/loader:424:17
+     10   58.8%          Function: ^tryExtensions node:internal/modules/cjs/loader:440:23
+      6   60.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:534:28
+      4   40.0%            Function: ^tryPackage node:internal/modules/cjs/loader:378:20
+      7   41.2%          LazyCompile: *Module._findPath node:internal/modules/cjs/loader:534:28
+      6   85.7%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:894:35
+      1   14.3%            LazyCompile: *Module._resolveFilename node:internal/modules/cjs/loader:894:35
+     14    1.2%    LazyCompile: *writeOrBuffer node:internal/streams/writable:367:23
+     14  100.0%      LazyCompile: *_write node:internal/streams/writable:285:16
+     14  100.0%        Function: ^Writable.write node:internal/streams/writable:335:36
+      9   64.3%          Function: ^value node:internal/console/constructor:271:20
+      9  100.0%            Function: ^log node:internal/console/constructor:375:6
+      5   35.7%          Function: ^log C:\Users\Kaku\Desktop\Desafio-14\node_modules\winston\lib\winston\transports\console.js:44:6
+      5  100.0%            Function: ^_write C:\Users\Kaku\Desktop\Desafio-14\node_modules\winston-transport\index.js:69:51
+
+    402   24.7%  C:\Program Files\nodejs\node.exe
+    258   64.2%    C:\Program Files\nodejs\node.exe
+     40   15.5%      Function: ^compileFunction node:vm:316:25
+     39   97.5%        Function: ^wrapSafe node:internal/modules/cjs/loader:1069:18
+     37   94.9%          Function: ^Module._compile node:internal/modules/cjs/loader:1109:37
+     35   94.6%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      2    5.4%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      2    5.1%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1109:37
+      2  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      1    2.5%        LazyCompile: ~wrapSafe node:internal/modules/cjs/loader:1069:18
+      1  100.0%          LazyCompile: ~Module._compile node:internal/modules/cjs/loader:1109:37
+      1  100.0%            LazyCompile: ~Module._extensions..js node:internal/modules/cjs/loader:1164:37
+     35   13.6%      Function: ^handleWriteReq node:internal/stream_base_commons:45:24
+     35  100.0%        Function: ^writeGeneric node:internal/stream_base_commons:147:22
+     35  100.0%          Function: ^Socket._writeGeneric node:net:879:42
+     35  100.0%            Function: ^Socket._write node:net:916:35
+      9    3.5%      Function: ^stat node:internal/modules/cjs/loader:157:14
+      7   77.8%        Function: ^tryFile node:internal/modules/cjs/loader:424:17
+      4   57.1%          Function: ^tryExtensions node:internal/modules/cjs/loader:440:23
+      2   50.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:534:28
+      1   25.0%            LazyCompile: ~tryPackage node:internal/modules/cjs/loader:378:20
+      1   25.0%            Function: ^tryPackage node:internal/modules/cjs/loader:378:20
+      3   42.9%          LazyCompile: *Module._findPath node:internal/modules/cjs/loader:534:28
+      3  100.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:894:35
+      2   22.2%        Function: ^Module._findPath node:internal/modules/cjs/loader:534:28
+      2  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:894:35
+      2  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:800:24
+      7    2.7%      Function: ^randomFillSync node:internal/crypto/random:113:24
+      7  100.0%        Function: ^randomBytes node:internal/crypto/random:93:21
+      7  100.0%          Function: ^randomBytesSync C:\Users\Kaku\Desktop\Desafio-14\node_modules\random-bytes\index.js:72:25
+      7  100.0%            Function: ^uidSync C:\Users\Kaku\Desktop\Desafio-14\node_modules\uid-safe\index.js:75:18
+      7    2.7%      C:\Program Files\nodejs\node.exe
+      1   14.3%        LazyCompile: ~m C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\pt_BR\phone_number\index.js:1:259
+      1  100.0%          LazyCompile: ~N C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\pt_BR\phone_number\index.js:1:533
+      1  100.0%            Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\pt_BR\phone_number\index.js:1:1
+      1   14.3%        LazyCompile: ~f C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\pt_BR\company\index.js:1:259
+      1  100.0%          LazyCompile: ~D C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\pt_BR\company\index.js:1:533
+      1  100.0%            Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\@faker-js\faker\dist\cjs\locales\pt_BR\company\index.js:1:1
+      1   14.3%        LazyCompile: ~exports.install C:\Users\Kaku\Desktop\Desafio-14\node_modules\whatwg-url\lib\URL.js:83:19
+      1  100.0%          Function: ~<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\whatwg-url\index.js:1:1
+      1  100.0%            Function: ^Module._compile node:internal/modules/cjs/loader:1109:37
+      1   14.3%        LazyCompile: ~Monitor C:\Users\Kaku\Desktop\Desafio-14\node_modules\mongodb\lib\sdam\monitor.js:41:16
+      1  100.0%          LazyCompile: ~Server C:\Users\Kaku\Desktop\Desafio-14\node_modules\mongodb\lib\sdam\server.js:29:16
+      1  100.0%            Function: ^createAndConnectServer C:\Users\Kaku\Desktop\Desafio-14\node_modules\mongodb\lib\sdam\topology.js:467:32
+      1   14.3%        LazyCompile: *Module._findPath node:internal/modules/cjs/loader:534:28
+      1  100.0%          Function: ^Module._resolveFilename node:internal/modules/cjs/loader:894:35
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:800:24
+      1   14.3%        Function: ^format C:\Users\Kaku\Desktop\Desafio-14\node_modules\content-type\index.js:65:17
+      1  100.0%          Function: ^setCharset C:\Users\Kaku\Desktop\Desafio-14\node_modules\express\lib\utils.js:248:41
+      1  100.0%            Function: ^send C:\Users\Kaku\Desktop\Desafio-14\node_modules\express\lib\response.js:111:25
+      1   14.3%        Function: ^findLongestRegisteredExtension node:internal/modules/cjs/loader:453:40
+      1  100.0%          Function: ^Module.load node:internal/modules/cjs/loader:1021:33
+      1  100.0%            Function: ^Module._load node:internal/modules/cjs/loader:800:24
+      5    1.9%      Function: ^read node:internal/modules/package_json_reader:16:14
+      3   60.0%        Function: ^readPackage node:internal/modules/cjs/loader:319:21
+      2   66.7%          Function: ^tryPackage node:internal/modules/cjs/loader:378:20
+      1   50.0%            LazyCompile: *Module._findPath node:internal/modules/cjs/loader:534:28
+      1   50.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:534:28
+      1   33.3%          Function: ^resolveExports node:internal/modules/cjs/loader:512:24
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:534:28
+      2   40.0%        LazyCompile: *readPackageScope node:internal/modules/cjs/loader:361:26
+      2  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      2  100.0%            LazyCompile: *Module._load node:internal/modules/cjs/loader:800:24
+      5    1.9%      Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      5  100.0%        Function: ^nativeModuleRequire node:internal/bootstrap/loaders:349:29
+      1   20.0%          Function: ~<anonymous> node:tls:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1   20.0%          Function: ~<anonymous> node:internal/process/esm_loader:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1   20.0%          Function: ~<anonymous> node:internal/modules/esm/loader:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1   20.0%          Function: ~<anonymous> node:child_process:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      1   20.0%          Function: ~<anonymous> node:_http_outgoing:1:1
+      1  100.0%            Function: ^compileForInternalLoader node:internal/bootstrap/loaders:316:27
+      4    1.6%      LazyCompile: *next C:\Users\Kaku\Desktop\Desafio-14\node_modules\express\lib\router\index.js:177:16
+      2   50.0%        Function: ^handle C:\Users\Kaku\Desktop\Desafio-14\node_modules\express\lib\router\index.js:136:31
+      2  100.0%          Function: ^router C:\Users\Kaku\Desktop\Desafio-14\node_modules\express\lib\router\index.js:46:18
+      2  100.0%            Function: ^handle C:\Users\Kaku\Desktop\Desafio-14\node_modules\express\lib\router\layer.js:86:49
+      1   25.0%        LazyCompile: *handle C:\Users\Kaku\Desktop\Desafio-14\node_modules\express\lib\router\index.js:136:31
+      1  100.0%          Function: ^router C:\Users\Kaku\Desktop\Desafio-14\node_modules\express\lib\router\index.js:46:18
+      1  100.0%            LazyCompile: *trim_prefix C:\Users\Kaku\Desktop\Desafio-14\node_modules\express\lib\router\index.js:293:23
+      1   25.0%        Function: ^<anonymous> C:\Users\Kaku\Desktop\Desafio-14\server.js:88:9
+      1  100.0%          Function: ^handle C:\Users\Kaku\Desktop\Desafio-14\node_modules\express\lib\router\layer.js:86:49
+      1  100.0%            Function: ^trim_prefix C:\Users\Kaku\Desktop\Desafio-14\node_modules\express\lib\router\index.js:293:23
+      4    1.6%      Function: ^readSync node:fs:695:18
+      4  100.0%        Function: ^tryReadSync node:fs:434:21
+      4  100.0%          Function: ^readFileSync node:fs:455:22
+      4  100.0%            Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      3    1.2%      Function: ^tryStatSync node:fs:409:21
+      3  100.0%        Function: ^readFileSync node:fs:455:22
+      3  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      2   66.7%            Function: ^Module.load node:internal/modules/cjs/loader:1021:33
+      1   33.3%            LazyCompile: *Module._load node:internal/modules/cjs/loader:800:24
+      3    1.2%      Function: ^realpathSync node:fs:2455:22
+      3  100.0%        Function: ^toRealPath node:internal/modules/cjs/loader:433:20
+      3  100.0%          Function: ^tryFile node:internal/modules/cjs/loader:424:17
+      3  100.0%            Function: ^tryExtensions node:internal/modules/cjs/loader:440:23
+      3    1.2%      Function: ^openSync node:fs:581:18
+      3  100.0%        Function: ^readFileSync node:fs:455:22
+      3  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+      3  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1021:33
+      3    1.2%      Function: ^hash C:\Users\Kaku\Desktop\Desafio-14\node_modules\express-session\index.js:596:14
+      3  100.0%        Function: ^isModified C:\Users\Kaku\Desktop\Desafio-14\node_modules\express-session\index.js:425:24
+      2   66.7%          Function: ^shouldSetCookie C:\Users\Kaku\Desktop\Desafio-14\node_modules\express-session\index.js:464:29
+      2  100.0%            Function: ^<anonymous> C:\Users\Kaku\Desktop\Desafio-14\node_modules\express-session\index.js:220:28
+      1   33.3%          Function: ^shouldSave C:\Users\Kaku\Desktop\Desafio-14\node_modules\express-session\index.js:440:24
+      1  100.0%            Function: ^end C:\Users\Kaku\Desktop\Desafio-14\node_modules\express-session\index.js:250:27
+      3    1.2%      Function: ^end node:_http_outgoing:953:45
+      3  100.0%        Function: ^end C:\Users\Kaku\Desktop\Desafio-14\node_modules\express-session\index.js:250:27
+      3  100.0%          Function: ^send C:\Users\Kaku\Desktop\Desafio-14\node_modules\express\lib\response.js:111:25
+      3  100.0%            Function: ^json C:\Users\Kaku\Desktop\Desafio-14\node_modules\express\lib\response.js:250:25
+     47   11.7%    LazyCompile: *compileFunction node:vm:316:25
+     47  100.0%      Function: ^wrapSafe node:internal/modules/cjs/loader:1069:18
+     25   53.2%        Function: ^Module._compile node:internal/modules/cjs/loader:1109:37
+     25  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+     25  100.0%            Function: ^Module.load node:internal/modules/cjs/loader:1021:33
+     22   46.8%        LazyCompile: *Module._compile node:internal/modules/cjs/loader:1109:37
+     22  100.0%          Function: ^Module._extensions..js node:internal/modules/cjs/loader:1164:37
+     11   50.0%            Function: ^Module.load node:internal/modules/cjs/loader:1021:33
+      9   40.9%            LazyCompile: *Module._load node:internal/modules/cjs/loader:800:24
+      2    9.1%            LazyCompile: *Module.load node:internal/modules/cjs/loader:1021:33
+      5    1.2%    LazyCompile: *realpathSync node:fs:2455:22
+      5  100.0%      Function: ^toRealPath node:internal/modules/cjs/loader:433:20
+      5  100.0%        Function: ^tryFile node:internal/modules/cjs/loader:424:17
+      4   80.0%          LazyCompile: *Module._findPath node:internal/modules/cjs/loader:534:28
+      3   75.0%            Function: ^Module._resolveFilename node:internal/modules/cjs/loader:894:35
+      1   25.0%            LazyCompile: *Module._resolveFilename node:internal/modules/cjs/loader:894:35
+      1   20.0%          Function: ^tryExtensions node:internal/modules/cjs/loader:440:23
+      1  100.0%            Function: ^Module._findPath node:internal/modules/cjs/loader:534:28
+

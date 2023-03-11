@@ -1,0 +1,25 @@
+<%- include('./cabecera')-%>
+<body>
+    <header>
+        <nav>
+            <a href="http://localhost:8080/datos">INICIO</a>            
+            <a href="http://localhost:8080/api/mensajeria">MENSAJERIA</a>
+            <a href="http://localhost:8080/test">5 PRODUCTOS RANDOM</a>                           
+            <a class="carrito" href="@">Carrito</a>                 
+        </nav>                   
+    </header> 
+    <div class="container mt-3">
+        <div class="estilo d-flex justify-content-between p-3" style="background-color: green;color: white;">            
+            <h2 style="text-align:center"><i>Bienvenido <%-datos-%></i>
+            <!-- </h2><button class="btn btn-danger my-2" onclick="location.href='/logout'">DESCONECTARSE</button> -->
+        </div>
+        
+    </div>
+    <div class="container mt-3">
+        <div class="jumbotron">                                  
+            <%- include('./formulario')-%>
+            <div id="producto"></div>                                               
+        </div>
+    </div>
+    <script src="/main.js"></script> 
+</body>
