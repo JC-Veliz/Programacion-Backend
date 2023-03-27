@@ -1,0 +1,28 @@
+<div style="display: flex; justify-content: space-between">
+    <h2 class="fw-bold mb-2 text-uppercase">Bienvenido! <%= datos.username %></h4>
+    <a class="nav-link" href="/logout">Salir <span class="sr-only"></span></a>
+</div>
+
+<h2 style="color:blue;">Ingrese datos</h1>
+<br>
+
+<form action="/" method="post">
+
+    <div class="form-group">
+        <label for="titulo"><b>Titulo</b></label>
+        <input id="titulo" class="form-control" type="text" name="titulo">
+    </div>
+
+
+    <div class="form-group">
+        <label for="precio"><b>Precio</b></label>
+        <input id="precio" class="form-control" type="number" name="precio">
+    </div>
+
+    <div class="form-group">
+        <label for="imagen"><b>Imagen</b></label>
+        <input id="imagen" class="form-control" type="text" name="imagen">
+    </div>
+
+    <button id="enviarProducto" class="btn btn-success mt-3 mb-5">Enviar</button>
+</form>

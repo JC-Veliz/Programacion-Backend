@@ -1,0 +1,12 @@
+[2023-03-19T01:25:12.710] [WARN] warnArchive - Estado: 404, Ruta consultada: /favicon.ico, Metodo GET
+[2023-03-19T23:53:21.876] [WARN] warnArchive - Estado: 404, Ruta consultada: /favicon.ico, Metodo GET
+[2023-03-23T13:48:43.923] [WARN] warnArchive - Estado: 404, Ruta consultada: /api/?, Metodo GET
+[2023-03-24T08:39:23.060] [WARN] warnArchive - Estado: 404, Ruta consultada: /favicon.ico, Metodo GET
+[2023-03-24T09:29:48.197] [WARN] warnArchive - Estado: 404, Ruta consultada: /api, Metodo GET
+[2023-03-24T09:32:03.696] [WARN] warnArchive - Estado: 404, Ruta consultada: /main.js, Metodo GET
+[2023-03-24T09:47:49.919] [WARN] warnArchive - Estado: 404, Ruta consultada: /api/productos/, Metodo GET
+[2023-03-24T10:16:27.751] [WARN] warnArchive - Estado: 404, Ruta consultada: /api/productos/1, Metodo GET
+[2023-03-24T10:16:45.168] [WARN] warnArchive - Estado: 404, Ruta consultada: /api/productos/1, Metodo GET
+[2023-03-24T10:16:54.174] [WARN] warnArchive - Estado: 404, Ruta consultada: /productos/1, Metodo GET
+[2023-03-26T22:28:03.825] [WARN] warnArchive - Estado: 404, Ruta consultada: /favicon.ico, Metodo GET
+[2023-03-26T22:31:45.279] [WARN] warnArchive - Estado: 404, Ruta consultada: /product/:6400f7f5b55dbb08d7d1517d, Metodo POST
