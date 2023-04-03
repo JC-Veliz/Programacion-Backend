@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi plantilla de Ingreso de Datos en EJS</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/normalizr@3.6.1/dist/normalizr.browser.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-3">
+        <div class="jumbotron">
+            <%- include('./formulario')-%>
+            <%- include('./historialFaker')-%>
+            <%- include('./chat')-%>
+        </div>
+    </div>
+
+    <script src="../js/index.js"></script>
+</body>
+
+</html>

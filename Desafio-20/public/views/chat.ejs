@@ -1,0 +1,69 @@
+<h1 style="color: blue" id="tituloChat">Chat</h1>
+<br />
+
+<form method="POST" action="/keepSession">
+  <div class="form-group">
+    <label for="email"><b>Email</b></label>
+    <input id="email" class="form-control" type="email" name="email" required />
+  </div>
+
+  <div class="form-group">
+    <label for="nombre"><b>Nombre</b></label>
+    <input
+      id="nombre"
+      class="form-control"
+      type="text"
+      name="nombre"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="apellido"><b>Apellido</b></label>
+    <input
+      id="apellido"
+      class="form-control"
+      type="text"
+      name="apellido"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="edad"><b>Edad</b></label>
+    <input id="edad" class="form-control" type="number" name="edad" required />
+  </div>
+
+  <div class="form-group">
+    <label for="alias"><b>Alias</b></label>
+    <input id="alias" class="form-control" type="text" name="alias" required />
+  </div>
+
+  <div class="form-group">
+    <label for="avatar"><b>Avatar</b></label>
+    <input
+      id="avatar"
+      class="form-control"
+      type="text"
+      name="avatar"
+      required
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="mensaje"><b>Mensaje</b></label>
+    <input
+      id="mensaje"
+      class="form-control"
+      type="text"
+      name="mensaje"
+      required
+    />
+  </div>
+
+  <button class="btn btn-success mt-3 mb-5" type="submit" id="enviarMensaje">
+    Enviar
+  </button>
+</form>
+
+<p id="p"></p>
