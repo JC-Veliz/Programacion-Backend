@@ -1,0 +1,85 @@
+<div class="container login">
+    <div class="jumbotron">
+        <h1 class="text-center">COLORES</h1>
+        <br />
+        <form class="form" role="form" id="colors">
+            <div class="form-group">
+                <input id="color" name="color" placeholder="Color" class="form-control" type="text"
+                    required />
+            </div>
+
+            <div class="form-group text-center">
+                <input class="btn btn-success" type="submit" value="+" />
+            </div>
+        </form>
+    </div>
+    <div>
+        <ul id="lista"></ul>
+    </div>
+</div>
+<style>
+    h1 {
+        color: blue;
+    }
+
+    .login {
+        margin-top: 3rem !important;
+    }
+
+    body {
+        background-color: black;
+    }
+</style>
+<script>
+    let form = document.getElementById("colors");
+
+    getColores() // TRAE COLORES AL INICIO
+
+
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const body = {
+            color: document.querySelector('[name="color"]').value
+        }
+        mandarColor(body)
+        e.target.reset();
+
+    })
+
+    function mandarColor(body) {
+        fetch('/colores', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        })
+            .then(response => response.json())
+            .then(data => {
+                mostrarColores(data)
+            })
+            .catch(error => console.error(error));
+    }
+
+    function getColores() {
+        fetch('/colores', {
+            method: 'GET',
+        })
+            .then(response => response.json())
+            .then(data => {
+                mostrarColores(data)
+            })
+            .catch(error => console.error(error));
+    }
+
+    function mostrarColores(colores) {
+        if (colores.length > 0) {
+            html = colores.map(color => {
+                return `<li style = "color: ${color}"> ${color} </li>`
+            }).join(" ")
+            document.getElementById("lista").innerHTML = html;
+        }
+    }
+
+</script>
