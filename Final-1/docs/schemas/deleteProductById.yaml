@@ -1,0 +1,20 @@
+# Borrar Producto por ID
+
+components:
+  requestBodies:
+    DeleteProduct:
+      type: object
+      required:
+        - id
+        
+
+      properties:
+        
+        id:
+          type: string
+          description: Id del producto a eliminar
+
+
+      example:
+        
+        id: 64414df189ff25c67a30cdfa

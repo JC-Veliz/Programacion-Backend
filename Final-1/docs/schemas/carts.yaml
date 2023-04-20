@@ -1,0 +1,41 @@
+# Carrito
+
+components:
+  schemas:
+    Carrito:
+      type: object
+      required:
+        - id
+        - productos
+        - timestamp
+
+      properties:
+        id:
+          type: string
+          description: Identificador de cada producto
+
+        productos:
+          type: array
+          description: Lista de objetos de Productos 
+
+        timestamp:
+          type: date
+          description: Datos de creacion de carrito
+        
+
+
+      example:
+        id: 643bf22b90d511aa4189eac5
+        productos: [{
+          titulo: Regla,
+          descripcion: PLastico,
+          codigo: 20,
+          precio: 400,
+          foto: ImagenRegla,
+          id:  1,
+          timestamp: 2023-04-20T16:43:49.834Z,
+        }]
+        timestamp: 2023-04-16T13:03:39.071Z
+
+
+       

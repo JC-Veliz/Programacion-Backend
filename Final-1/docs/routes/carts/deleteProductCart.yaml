@@ -1,0 +1,19 @@
+ /carrito/producto:
+    delete:
+      summary: Eliminar producto del carrito por sus IDS
+      tags:
+        - Carrito
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/DeleteProductCart'
+        
+      responses: 
+        "201":
+          descriptions: Producto del carrito a Eliminar
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Carrito'

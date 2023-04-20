@@ -1,0 +1,15 @@
+# Nuevo Carrito
+
+components:
+  requestBodies:
+    NewCarrito:
+      type: false
+      required: false
+
+      properties: false
+
+
+      
+
+        
+        

@@ -1,0 +1,19 @@
+/carritoss:
+    get:
+      summary: Muestra el carrito buscado por id
+      tags:
+        - Carrito
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/GetCartById'
+        
+      responses: 
+        "201":
+          descriptions: Producto por id
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Carrito'

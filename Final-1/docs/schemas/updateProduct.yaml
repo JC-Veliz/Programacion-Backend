@@ -1,0 +1,49 @@
+# Buscar Producto por ID y modificar lo que necesitemos
+
+components:
+  requestBodies:
+    UpdateProduct:
+      type: object
+      required:
+        - id
+        - titulo
+        - descripcion
+        - codigo
+        - precio
+        - foto
+        - stock
+        
+
+      properties:
+        
+        id:
+          type: string
+          description: Id del producto a modificar
+        titulo:
+          type: string
+          description: Titulo a modificar
+        descripcion:
+          type: string
+          description: Descripcion a modificar
+        codigo:
+          type: number
+          description: Codigo a modificar
+        precio:
+          type: string
+          description: Precio a modificar
+        foto:
+          type: string
+          description: Foto a modificar
+        stock:
+          type: string
+          description: Stock a modificar
+
+      example:
+        
+        id: 64414d88839574b55dc9c49d
+        titulo: "Nombre Modificado"
+        descripcion: "Descripcion Modificada"
+        codigo: "Codigo modificado"
+        precio: "Precio Modificado"
+        foto: "Foto Modificado"
+        stock: "Stock modificado"

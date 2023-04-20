@@ -1,0 +1,16 @@
+paths:
+  /carrito:
+    get:
+      summary: Crea un carrito con productos vacios
+      tags:
+        - Carrito
+      requestBody:
+        required: false
+        
+      responses: 
+        "201":
+          descriptions: El producto fue creado y almacenado correctamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Carrito'

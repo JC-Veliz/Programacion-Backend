@@ -1,0 +1,19 @@
+ /carrito:
+    delete:
+      summary: Eliminar producto por ID
+      tags:
+        - Carrito
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/DeleteCart'
+        
+      responses: 
+        "201":
+          descriptions: Carrito a Eliminar
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Carrito'

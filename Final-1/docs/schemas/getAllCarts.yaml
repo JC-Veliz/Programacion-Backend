@@ -1,0 +1,12 @@
+# Busca todos los carritos
+
+components:
+  requestBodies:
+    NewCarrito:
+      type: false
+      required: false
+
+      properties: false
+
+
+      

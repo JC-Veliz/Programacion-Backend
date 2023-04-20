@@ -1,0 +1,16 @@
+paths:
+  /carritos:
+    get:
+      summary: Busca todos los Carritos
+      tags:
+        - Carrito
+      requestBody:
+        required: false
+        
+      responses: 
+        "201":
+          descriptions: Todos los carritos
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Carrito'

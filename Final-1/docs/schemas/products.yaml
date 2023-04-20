@@ -1,0 +1,53 @@
+# Producto
+
+components:
+  schemas:
+    Product:
+      type: object
+      required:
+        - id
+        - titulo
+        - descripcion
+        - codigo
+        - precio
+        - foto
+        - stock
+
+      properties:
+        id:
+          type: string
+          description: Identificador de cada producto 
+
+        titulo:
+          type: string
+          description: Nombre del Producto
+        
+        descripcion:
+          type: string
+          description: Brebe descripcion del producto
+
+        codigo:
+          type: number
+          description: Codigo del producto.- 
+
+        precio:
+          type: number
+          description: Valor numerico del producto.
+
+        foto:
+          type: string
+          description: URL de la imagen del producto.
+
+        stock:
+          type: number
+          description: cantidad de productos que tenemos. 
+
+
+      example:
+        id: 643bf90d23ec20a1173769a6
+        titulo: Escuadra
+        descripcion: Plastico
+        codigo: 20  
+        precio: 200 
+        foto: https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png
+        stock: 30

@@ -1,0 +1,20 @@
+paths:
+  /carrito:
+    post:
+      summary: Agrega el producto al Carrito por su ID
+      tags:
+        - Carrito
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/AddProductCart'
+        
+      responses: 
+        "201":
+          descriptions: El producto fue creado y almacenado correctamente
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Carrito'

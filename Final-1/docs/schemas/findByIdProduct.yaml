@@ -1,0 +1,20 @@
+# Buscar Producto por ID
+
+components:
+  requestBodies:
+    FindProduct:
+      type: object
+      required:
+        - id
+        
+
+      properties:
+        
+        id:
+          type: string
+          description: Id del producto
+
+
+      example:
+        
+        id: 64414d88839574b55dc9c49d

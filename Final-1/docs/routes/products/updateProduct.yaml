@@ -1,0 +1,19 @@
+ /api/producto:
+    put:
+      summary: Modifica el Producto que queremos buscandolo por ID
+      tags:
+        - Productos
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/UpdateProduct'
+        
+      responses: 
+        "201":
+          descriptions: Producto Modificado
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'

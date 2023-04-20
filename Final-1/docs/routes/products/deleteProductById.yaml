@@ -1,0 +1,19 @@
+ /api/producto:
+    delete:
+      summary: Eliminar producto por ID
+      tags:
+        - Productos
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/requestBodies/DeleteProduct'
+        
+      responses: 
+        "201":
+          descriptions: Producto a Eliminar
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'

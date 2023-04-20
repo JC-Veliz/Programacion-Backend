@@ -1,0 +1,20 @@
+# Borrar Carrito por ID
+
+components:
+  requestBodies:
+    DeleteCart:
+      type: object
+      required:
+        - id
+        
+
+      properties:
+        
+        id:
+          type: string
+          description: Id del carrito a eliminar
+
+
+      example:
+        
+        idCart: 644181d6d3ac0a32c12490ef

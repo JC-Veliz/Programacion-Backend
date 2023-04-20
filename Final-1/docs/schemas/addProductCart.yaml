@@ -1,0 +1,31 @@
+# Agregar Productos al Carrito
+
+components:
+  requestBodies:
+    AddProductCart:
+      type: object
+      required:
+        - id
+        - productos
+
+      properties:
+
+        id:
+          type: string
+          description: Identificador del carrito para agregar Productos
+
+        productos: 
+          type: array
+          description: Lista de objetos de Productos
+          
+
+      example:
+        
+        id: 6441749f30f5b0e8e0ea4a93
+        productos: {
+          titulo: Globo Terraqueo,
+          descripcion: Plastico,
+          codigo: 33,
+          precio: 4030,
+          foto: ImagenGlobo
+        }

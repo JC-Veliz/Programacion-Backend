@@ -1,0 +1,20 @@
+# Buscar Carrito por ID
+
+components:
+  requestBodies:
+    GetCartById:
+      type: object
+      required:
+        - id
+        
+
+      properties:
+        
+        id:
+          type: string
+          description: Id del Carrito a buscar
+
+
+      example:
+        
+        id: 643bf22b90d511aa4189eac5

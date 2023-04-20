@@ -1,0 +1,59 @@
+<%- include('./cabecera')-%>
+<body>
+  <div class="container my-5">
+    <div class="jumbotron">
+  
+      <h1>REGISTRARSE</h1>
+      <br>
+      <form class="form" action="/register" method="post" enctype="multipart/form-data" role="form" autocomplete="off">
+  
+        <div class="form-group">
+          <input id="username" name='username' placeholder="nombre" class="form-control" type="text" required>
+        </div>
+  
+        <div class="form-group">
+          <input id="password" name='password' placeholder="password" class="form-control" type="password" required>
+        </div>
+  
+        <div class="form-group">
+          <input id="direccion" name='direccion' placeholder="direccion" class="form-control" type="text" required>
+        </div>
+
+        <div class="form-group">
+          <input id="email" name="email" placeholder="email" class="form-control" type="email" required/>
+      </div>
+
+        <div class="form-group d-flex">
+          <input id="edad" name='edad' placeholder="edad" class="form-control" type="number" required>
+        </div>
+
+        <div class="form-group">
+          <select id="codigo" name="codigo" class="form-control col-2"required >
+            <option value="549">+54 Argentina</option>
+            <option value="55">+55 Brasil</option>
+            <option value="569">+56 Chile</option>
+            <option value="57">+57 Colombia</option>
+            <option value="58">+58 Venezuela</option>
+        </select>
+
+          <input id="telefono" name='telefono' placeholder="telefono" class="form-control" type="number" required>
+        </div>
+
+        <div class="form-group">
+          <input id="avatar" name='avatar' placeholder="foto o avatar" class="form-control" type="file" required>
+        </div>
+  
+        <div class="form-group">
+          <input class="btn btn-success my-3" type="submit" value="REGISTRARSE">
+        </div>
+      </form>
+  
+      <hr>
+  
+      <div class="text-left">
+        <button class="btn btn-success my-3" onclick="location.href='/login'">Ir a Login</button>
+      </div>
+  
+    </div>
+  </div>
+</body>
